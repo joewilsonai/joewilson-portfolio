@@ -1,0 +1,148 @@
+/* ---------------------------------------------------------------------------
+   Web fonts — Fraunces (display variable), Geist (body), JetBrains Mono (code).
+   Loaded from Google Fonts for now. Self-host before going to high traffic.
+   --------------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design system — dark editorial.
+   Inspired by santifer.io. Warm clay accent over near-black surfaces.
+   --------------------------------------------------------------------------- */
+
+@theme {
+  /* Surfaces */
+  --color-ink: #0a0a0a;          /* page background */
+  --color-surface-1: #131316;    /* card */
+  --color-surface-2: #1a1a1f;    /* nested card */
+  --color-border: #26262c;       /* hairlines */
+  --color-border-hot: #3a3a42;   /* hairlines on hover */
+
+  /* Text */
+  --color-text: #ededed;         /* primary */
+  --color-muted: #a8a8b0;        /* secondary */
+  --color-dim: #6e6e76;          /* tertiary / captions */
+
+  /* Accent — warm clay, reads Anthropic-adjacent without being on the nose. */
+  --color-accent: #e07a2f;
+  --color-accent-soft: #b8631f;
+
+  /* Typography */
+  --font-display: "Fraunces", "Iowan Old Style", "Apple Garamond", Georgia, serif;
+  --font-body: "Geist", -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+
+  /* Container */
+  --container-prose: 42rem;      /* 672px — reading width */
+  --container-grid: 72rem;       /* 1152px — full grid */
+}
+
+/* ---------------------------------------------------------------------------
+   Base
+   --------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* Subtle radial gradient — almost imperceptible, prevents flat-paint feel. */
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(224, 122, 47, 0.07), transparent 60%),
+    radial-gradient(800px 500px at 90% 10%, rgba(120, 80, 200, 0.04), transparent 60%),
+    var(--color-ink);
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+
+/* Display headlines */
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-variation-settings: "opsz" 144;
+}
+.display em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-accent);
+}
+
+/* Mono accents */
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  letter-spacing: -0.01em;
+}
+
+/* Section labels — small caps over a hairline. */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-dim);
+}
+
+/* Card */
+.card {
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+.card:hover {
+  border-color: var(--color-border-hot);
+}
+
+/* Pill */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  background: rgba(255, 255, 255, 0.015);
+}
+
+/* Hairline divider */
+.hairline {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-border), transparent);
+}
+
+/* Soft accent text */
+.accent {
+  color: var(--color-accent);
+}
+
+/* Anchor reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a.link {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-color: var(--color-border-hot);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 200ms ease;
+}
+a.link:hover {
+  text-decoration-color: var(--color-accent);
+}
