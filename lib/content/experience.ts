@@ -40,8 +40,8 @@ export const experience: ExperienceEntry[] = [
   {
     company: "Microsoft",
     role: "Multiple roles across enterprise sales, customer success, and technical advisory",
-    // PLACEHOLDER — confirm actual start year before ship.
-    period: "~2000 — 2024",
+    
+    period: "1998 — 2024",
     location: "Various",
     lede: "25 years inside Microsoft, across the arc of enterprise tech — from on-prem to cloud, from selling product to running customer outcomes. The operating reps that make the last 18 months legible.",
     bullets: [

@@ -7,8 +7,8 @@ export const identity = {
   location: "St. Charles, MO · Remote",
   email: "joe.wilson@live.com",
 
-  // PLACEHOLDER — swap with real LinkedIn slug before ship.
-  linkedin: "https://linkedin.com/in/joewilson",
+  
+  linkedin: "https://www.linkedin.com/in/joewilsonjr/",
 
   // PLACEHOLDER — domain will be confirmed at deploy time.
   domain: "joewilson.ai",
