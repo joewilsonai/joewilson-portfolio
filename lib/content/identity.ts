@@ -4,10 +4,9 @@
 export const identity = {
   name: "Joe Wilson",
   handle: "joewilson",
-  location: "St. Charles, MO · Remote",
+  location: "O'Fallon, MO · Remote",
   email: "joe.wilson@live.com",
 
-  
   linkedin: "https://www.linkedin.com/in/joewilsonjr/",
 
   // PLACEHOLDER — domain will be confirmed at deploy time.
@@ -23,14 +22,14 @@ export const identity = {
 
   // Badges under the hero. Keep to 2–3, mutually reinforcing.
   badges: [
-    "25 years enterprise tech",
-    "Microsoft → Rapsodo",
+    "27 years enterprise tech",
+    "Microsoft → AWS → Rapsodo → Obey",
     "Available · open to senior IC + leadership",
   ],
 
   // The manifesto block. Five short rhythmic lines.
   manifesto: [
-    "For 25 years I've been the operator who turns ambiguous customer problems into systems that ship.",
+    "For 27 years I've been the operator who turns ambiguous customer problems into systems that ship.",
     "At Rapsodo I ran customer success as a one-person function — CS, ops, data engineering, support — by pairing enterprise judgment with Claude Code as the engineering partner.",
     "What used to require five people, I now do alone.",
     "Now I'm looking for the next room with bigger teams, harder problems, and the same operating bias: end-to-end ownership, no excuses, ship.",
